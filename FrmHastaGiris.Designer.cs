@@ -70,7 +70,7 @@ namespace Hastane_Randevu_Sistemi
             this.label3.Size = new System.Drawing.Size(65, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Hasta Şifre :";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+//            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox1
             // 
@@ -106,6 +106,7 @@ namespace Hastane_Randevu_Sistemi
             this.butonhastagiris.TabIndex = 3;
             this.butonhastagiris.Text = "Giriş yap";
             this.butonhastagiris.UseVisualStyleBackColor = true;
+            this.butonhastagiris.Click += new System.EventHandler(this.butonhastagiris_Click);
             // 
             // label4
             // 
@@ -159,7 +160,7 @@ namespace Hastane_Randevu_Sistemi
             this.MinimizeBox = false;
             this.Name = "FrmHastaGiris";
             this.Text = "FrmHastaGiris";
-            this.Load += new System.EventHandler(this.FrmHastaGiris_Load);
+//            this.Load += new System.EventHandler(this.FrmHastaGiris_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

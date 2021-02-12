@@ -49,6 +49,7 @@ namespace Hastane_Randevu_Sistemi
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -59,6 +60,7 @@ namespace Hastane_Randevu_Sistemi
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.lbladsoyad);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.lbltc);
@@ -133,7 +135,6 @@ namespace Hastane_Randevu_Sistemi
             this.linkLabelbilgiduzenle.TabIndex = 8;
             this.linkLabelbilgiduzenle.TabStop = true;
             this.linkLabelbilgiduzenle.Text = "Bilgilerimi Düzenle ve Kaydet";
-            this.linkLabelbilgiduzenle.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelbilgiduzenle_LinkClicked);
             // 
             // butonrandevual
             // 
@@ -241,6 +242,16 @@ namespace Hastane_Randevu_Sistemi
             this.dataGridView2.Size = new System.Drawing.Size(501, 169);
             this.dataGridView2.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(167, 52);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 25);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Yenile";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormHastaDetay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,5 +302,6 @@ namespace Hastane_Randevu_Sistemi
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.LinkLabel linkLabelbilgiduzenle;
+        private System.Windows.Forms.Button button1;
     }
 }
