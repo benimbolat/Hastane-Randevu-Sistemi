@@ -31,11 +31,13 @@ namespace Hastane_Randevu_Sistemi
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHastaDetay));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.lbladsoyad = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lbltc = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.linkLabelbilgiduzenle = new System.Windows.Forms.LinkLabel();
             this.butonrandevual = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -49,7 +51,7 @@ namespace Hastane_Randevu_Sistemi
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -71,6 +73,16 @@ namespace Hastane_Randevu_Sistemi
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hasta kişisi bilgi";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(167, 52);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 25);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Yenile";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lbladsoyad
             // 
@@ -110,6 +122,8 @@ namespace Hastane_Randevu_Sistemi
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.linkLabelbilgiduzenle);
             this.groupBox2.Controls.Add(this.butonrandevual);
             this.groupBox2.Controls.Add(this.label9);
@@ -125,6 +139,15 @@ namespace Hastane_Randevu_Sistemi
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Randevu Paneli";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(27, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(24, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "İD :";
+            // 
             // linkLabelbilgiduzenle
             // 
             this.linkLabelbilgiduzenle.AutoSize = true;
@@ -135,6 +158,7 @@ namespace Hastane_Randevu_Sistemi
             this.linkLabelbilgiduzenle.TabIndex = 8;
             this.linkLabelbilgiduzenle.TabStop = true;
             this.linkLabelbilgiduzenle.Text = "Bilgilerimi Düzenle ve Kaydet";
+            this.linkLabelbilgiduzenle.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelbilgiduzenle_LinkClicked);
             // 
             // butonrandevual
             // 
@@ -148,7 +172,7 @@ namespace Hastane_Randevu_Sistemi
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 91);
+            this.label9.Location = new System.Drawing.Point(3, 108);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(48, 13);
             this.label9.TabIndex = 13;
@@ -156,16 +180,16 @@ namespace Hastane_Randevu_Sistemi
             // 
             // sikayet
             // 
-            this.sikayet.Location = new System.Drawing.Point(52, 78);
+            this.sikayet.Location = new System.Drawing.Point(52, 105);
             this.sikayet.Name = "sikayet";
-            this.sikayet.Size = new System.Drawing.Size(214, 154);
+            this.sikayet.Size = new System.Drawing.Size(214, 127);
             this.sikayet.TabIndex = 7;
             this.sikayet.Text = "";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 54);
+            this.label8.Location = new System.Drawing.Point(6, 75);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 13);
             this.label8.TabIndex = 12;
@@ -174,15 +198,16 @@ namespace Hastane_Randevu_Sistemi
             // comboBoxdoktor
             // 
             this.comboBoxdoktor.FormattingEnabled = true;
-            this.comboBoxdoktor.Location = new System.Drawing.Point(52, 51);
+            this.comboBoxdoktor.Location = new System.Drawing.Point(52, 72);
             this.comboBoxdoktor.Name = "comboBoxdoktor";
             this.comboBoxdoktor.Size = new System.Drawing.Size(214, 21);
             this.comboBoxdoktor.TabIndex = 11;
+            this.comboBoxdoktor.SelectedIndexChanged += new System.EventHandler(this.comboBoxdoktor_SelectedIndexChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(11, 27);
+            this.label7.Location = new System.Drawing.Point(11, 48);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 13);
             this.label7.TabIndex = 10;
@@ -191,10 +216,11 @@ namespace Hastane_Randevu_Sistemi
             // comboBoxbranş
             // 
             this.comboBoxbranş.FormattingEnabled = true;
-            this.comboBoxbranş.Location = new System.Drawing.Point(52, 24);
+            this.comboBoxbranş.Location = new System.Drawing.Point(52, 45);
             this.comboBoxbranş.Name = "comboBoxbranş";
             this.comboBoxbranş.Size = new System.Drawing.Size(214, 21);
             this.comboBoxbranş.TabIndex = 0;
+            this.comboBoxbranş.SelectedIndexChanged += new System.EventHandler(this.comboBoxbranş_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -242,15 +268,12 @@ namespace Hastane_Randevu_Sistemi
             this.dataGridView2.Size = new System.Drawing.Size(501, 169);
             this.dataGridView2.TabIndex = 0;
             // 
-            // button1
+            // textBox1
             // 
-            this.button1.Location = new System.Drawing.Point(167, 52);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 25);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Yenile";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.textBox1.Location = new System.Drawing.Point(52, 19);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(214, 20);
+            this.textBox1.TabIndex = 16;
             // 
             // FormHastaDetay
             // 
@@ -269,6 +292,7 @@ namespace Hastane_Randevu_Sistemi
             this.MinimizeBox = false;
             this.Name = "FormHastaDetay";
             this.Text = "Hasta Detay";
+            this.Load += new System.EventHandler(this.FormHastaDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -294,7 +318,6 @@ namespace Hastane_Randevu_Sistemi
         private System.Windows.Forms.RichTextBox sikayet;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBoxdoktor;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBoxbranş;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -303,5 +326,8 @@ namespace Hastane_Randevu_Sistemi
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.LinkLabel linkLabelbilgiduzenle;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
