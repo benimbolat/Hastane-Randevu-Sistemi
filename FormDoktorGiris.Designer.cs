@@ -48,6 +48,7 @@ namespace Hastane_Randevu_Sistemi
             this.butondoktorgiris.TabIndex = 16;
             this.butondoktorgiris.Text = "Giriş yap";
             this.butondoktorgiris.UseVisualStyleBackColor = true;
+            this.butondoktorgiris.Click += new System.EventHandler(this.butondoktorgiris_Click);
             // 
             // doktortcid
             // 

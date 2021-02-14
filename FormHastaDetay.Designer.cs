@@ -36,7 +36,7 @@ namespace Hastane_Randevu_Sistemi
             this.lbltc = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxid = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabelbilgiduzenle = new System.Windows.Forms.LinkLabel();
             this.butonrandevual = new System.Windows.Forms.Button();
@@ -110,7 +110,7 @@ namespace Hastane_Randevu_Sistemi
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.textBoxid);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.linkLabelbilgiduzenle);
             this.groupBox2.Controls.Add(this.butonrandevual);
@@ -127,12 +127,12 @@ namespace Hastane_Randevu_Sistemi
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Randevu Paneli";
             // 
-            // textBox1
+            // textBoxid
             // 
-            this.textBox1.Location = new System.Drawing.Point(52, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(214, 20);
-            this.textBox1.TabIndex = 16;
+            this.textBoxid.Location = new System.Drawing.Point(52, 19);
+            this.textBoxid.Name = "textBoxid";
+            this.textBoxid.Size = new System.Drawing.Size(214, 20);
+            this.textBoxid.TabIndex = 16;
             // 
             // label1
             // 
@@ -157,12 +157,14 @@ namespace Hastane_Randevu_Sistemi
             // 
             // butonrandevual
             // 
+            this.butonrandevual.Enabled = false;
             this.butonrandevual.Location = new System.Drawing.Point(52, 238);
             this.butonrandevual.Name = "butonrandevual";
             this.butonrandevual.Size = new System.Drawing.Size(214, 23);
             this.butonrandevual.TabIndex = 6;
             this.butonrandevual.Text = "Randevu Al";
             this.butonrandevual.UseVisualStyleBackColor = true;
+            this.butonrandevual.Click += new System.EventHandler(this.butonrandevual_Click);
             // 
             // label9
             // 
@@ -262,6 +264,7 @@ namespace Hastane_Randevu_Sistemi
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(501, 169);
             this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // FormHastaDetay
             // 
@@ -315,6 +318,6 @@ namespace Hastane_Randevu_Sistemi
         private System.Windows.Forms.LinkLabel linkLabelbilgiduzenle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxid;
     }
 }

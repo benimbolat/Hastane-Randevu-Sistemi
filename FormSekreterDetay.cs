@@ -119,5 +119,11 @@ namespace Hastane_Randevu_Sistemi
         private void buttonrandevuguncelle_Click(object sender, EventArgs e)
         {
         }
+
+        private void buttonduyurular_Click(object sender, EventArgs e)
+        {
+            FormDuyurular fr = new FormDuyurular();
+            fr.Show();
+        }
     }
 }

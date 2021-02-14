@@ -79,7 +79,7 @@ namespace Hastane_Randevu_Sistemi
         private void comboBoxdoktor_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * From Table_Randevular where randevubrans='"+comboBoxbranş.Text+"'",bgl.baglanti());
+            SqlDataAdapter da = new SqlDataAdapter("Select * From Table_Randevular where randevubrans='"+comboBoxbranş.Text +"'and Randevudoktor='"+comboBoxdoktor.Text+"' and Randevudurum=0",bgl.baglanti());
             da.Fill(dt);
             dataGridView2.DataSource = dt;
 
@@ -91,6 +91,25 @@ namespace Hastane_Randevu_Sistemi
             FormHastaBilgiDüzenle fr = new FormHastaBilgiDüzenle();
             fr.tcno = lbltc.Text;
             fr.Show();
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilen = dataGridView2.SelectedCells[0].RowIndex;
+            textBoxid.Text = dataGridView2.Rows[secilen].Cells[0].Value.ToString();
+        
+        
+        }
+
+        private void butonrandevual_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("update Table_Randevular set Randevudurum=1,hastatc=@p1,hastasikayet=@p2 where randevuid=@p3", bgl.baglanti());
+            komut.Parameters.AddWithValue("@p1", lbltc.Text);
+            komut.Parameters.AddWithValue("@p2", sikayet.Text);
+            komut.Parameters.AddWithValue("@p3", textBoxid.Text);
+            komut.ExecuteNonQuery();
+            bgl.baglanti().Close();
+            MessageBox.Show("Kayıt Tamamnlandı.","Tamamlandı");
         }
     }
 }

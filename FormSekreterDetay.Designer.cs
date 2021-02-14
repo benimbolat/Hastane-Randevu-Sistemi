@@ -61,6 +61,7 @@ namespace Hastane_Randevu_Sistemi
             this.buttonrandevulistesi = new System.Windows.Forms.Button();
             this.buttonbranspaneli = new System.Windows.Forms.Button();
             this.buttondoktorpaneli = new System.Windows.Forms.Button();
+            this.buttonduyurular = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -339,6 +340,7 @@ namespace Hastane_Randevu_Sistemi
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.buttonduyurular);
             this.groupBox5.Controls.Add(this.buttonrandevulistesi);
             this.groupBox5.Controls.Add(this.buttonbranspaneli);
             this.groupBox5.Controls.Add(this.buttondoktorpaneli);
@@ -378,6 +380,16 @@ namespace Hastane_Randevu_Sistemi
             this.buttondoktorpaneli.Text = "Doktor Paneli";
             this.buttondoktorpaneli.UseVisualStyleBackColor = true;
             this.buttondoktorpaneli.Click += new System.EventHandler(this.buttondoktorpaneli_Click);
+            // 
+            // buttonduyurular
+            // 
+            this.buttonduyurular.Location = new System.Drawing.Point(6, 48);
+            this.buttonduyurular.Name = "buttonduyurular";
+            this.buttonduyurular.Size = new System.Drawing.Size(113, 23);
+            this.buttonduyurular.TabIndex = 18;
+            this.buttonduyurular.Text = "Duyurular";
+            this.buttonduyurular.UseVisualStyleBackColor = true;
+            this.buttonduyurular.Click += new System.EventHandler(this.buttonduyurular_Click);
             // 
             // FormSekreterDetay
             // 
@@ -445,5 +457,6 @@ namespace Hastane_Randevu_Sistemi
         private System.Windows.Forms.Button buttonrandevulistesi;
         private System.Windows.Forms.Button buttonbranspaneli;
         private System.Windows.Forms.Button buttondoktorpaneli;
+        private System.Windows.Forms.Button buttonduyurular;
     }
 }

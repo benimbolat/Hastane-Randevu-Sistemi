@@ -69,9 +69,8 @@ namespace Hastane_Randevu_Sistemi
             this.lbldoktoradsoyad.AutoSize = true;
             this.lbldoktoradsoyad.Location = new System.Drawing.Point(82, 51);
             this.lbldoktoradsoyad.Name = "lbldoktoradsoyad";
-            this.lbldoktoradsoyad.Size = new System.Drawing.Size(25, 13);
+            this.lbldoktoradsoyad.Size = new System.Drawing.Size(0, 13);
             this.lbldoktoradsoyad.TabIndex = 2;
-            this.lbldoktoradsoyad.Text = "Null";
             // 
             // label3
             // 
@@ -87,9 +86,8 @@ namespace Hastane_Randevu_Sistemi
             this.lbldoktortc.AutoSize = true;
             this.lbldoktortc.Location = new System.Drawing.Point(82, 27);
             this.lbldoktortc.Name = "lbldoktortc";
-            this.lbldoktortc.Size = new System.Drawing.Size(73, 13);
+            this.lbldoktortc.Size = new System.Drawing.Size(0, 13);
             this.lbldoktortc.TabIndex = 1;
-            this.lbldoktortc.Text = "00000000000";
             // 
             // label1
             // 
@@ -138,6 +136,7 @@ namespace Hastane_Randevu_Sistemi
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(575, 394);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // groupBox4
             // 
@@ -160,6 +159,7 @@ namespace Hastane_Randevu_Sistemi
             this.vutoncıkıs.TabIndex = 3;
             this.vutoncıkıs.Text = "Çıkış Yap";
             this.vutoncıkıs.UseVisualStyleBackColor = true;
+            this.vutoncıkıs.Click += new System.EventHandler(this.vutoncıkıs_Click);
             // 
             // butonbos
             // 
@@ -178,6 +178,7 @@ namespace Hastane_Randevu_Sistemi
             this.butonduyurular.TabIndex = 1;
             this.butonduyurular.Text = "Duyuru";
             this.butonduyurular.UseVisualStyleBackColor = true;
+            this.butonduyurular.Click += new System.EventHandler(this.butonduyurular_Click);
             // 
             // butonguncelle
             // 
@@ -187,6 +188,7 @@ namespace Hastane_Randevu_Sistemi
             this.butonguncelle.TabIndex = 0;
             this.butonguncelle.Text = "Bilgi Düzenle";
             this.butonguncelle.UseVisualStyleBackColor = true;
+            this.butonguncelle.Click += new System.EventHandler(this.butonguncelle_Click);
             // 
             // FormDoktorDetay
             // 
@@ -204,6 +206,7 @@ namespace Hastane_Randevu_Sistemi
             this.MinimizeBox = false;
             this.Name = "FormDoktorDetay";
             this.Text = "Doktor Detay";
+            this.Load += new System.EventHandler(this.FormDoktorDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
