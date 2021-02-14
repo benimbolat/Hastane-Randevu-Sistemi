@@ -39,7 +39,6 @@ namespace Hastane_Randevu_Sistemi
             this.buttonduyuruolustur = new System.Windows.Forms.Button();
             this.richduyuru = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.buttonrandevuguncelle = new System.Windows.Forms.Button();
             this.buttonrandevukaydet = new System.Windows.Forms.Button();
             this.checkBoxdurum = new System.Windows.Forms.CheckBox();
             this.maskedtc = new System.Windows.Forms.MaskedTextBox();
@@ -140,6 +139,7 @@ namespace Hastane_Randevu_Sistemi
             this.buttonduyuruolustur.TabIndex = 1;
             this.buttonduyuruolustur.Text = "Oluştur";
             this.buttonduyuruolustur.UseVisualStyleBackColor = true;
+            this.buttonduyuruolustur.Click += new System.EventHandler(this.buttonduyuruolustur_Click);
             // 
             // richduyuru
             // 
@@ -151,7 +151,6 @@ namespace Hastane_Randevu_Sistemi
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.buttonrandevuguncelle);
             this.groupBox3.Controls.Add(this.buttonrandevukaydet);
             this.groupBox3.Controls.Add(this.checkBoxdurum);
             this.groupBox3.Controls.Add(this.maskedtc);
@@ -173,20 +172,11 @@ namespace Hastane_Randevu_Sistemi
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Randevular";
             // 
-            // buttonrandevuguncelle
-            // 
-            this.buttonrandevuguncelle.Location = new System.Drawing.Point(107, 199);
-            this.buttonrandevuguncelle.Name = "buttonrandevuguncelle";
-            this.buttonrandevuguncelle.Size = new System.Drawing.Size(93, 23);
-            this.buttonrandevuguncelle.TabIndex = 3;
-            this.buttonrandevuguncelle.Text = "Güncelle";
-            this.buttonrandevuguncelle.UseVisualStyleBackColor = true;
-            // 
             // buttonrandevukaydet
             // 
             this.buttonrandevukaydet.Location = new System.Drawing.Point(2, 199);
             this.buttonrandevukaydet.Name = "buttonrandevukaydet";
-            this.buttonrandevukaydet.Size = new System.Drawing.Size(93, 23);
+            this.buttonrandevukaydet.Size = new System.Drawing.Size(198, 23);
             this.buttonrandevukaydet.TabIndex = 14;
             this.buttonrandevukaydet.Text = "Kaydet";
             this.buttonrandevukaydet.UseVisualStyleBackColor = true;
@@ -367,6 +357,7 @@ namespace Hastane_Randevu_Sistemi
             this.buttonrandevulistesi.TabIndex = 17;
             this.buttonrandevulistesi.Text = "Randevu Listesi";
             this.buttonrandevulistesi.UseVisualStyleBackColor = true;
+            this.buttonrandevulistesi.Click += new System.EventHandler(this.buttonrandevulistesi_Click);
             // 
             // buttonbranspaneli
             // 
@@ -376,6 +367,7 @@ namespace Hastane_Randevu_Sistemi
             this.buttonbranspaneli.TabIndex = 16;
             this.buttonbranspaneli.Text = "Branş Paneli";
             this.buttonbranspaneli.UseVisualStyleBackColor = true;
+            this.buttonbranspaneli.Click += new System.EventHandler(this.buttonbranspaneli_Click);
             // 
             // buttondoktorpaneli
             // 
@@ -385,6 +377,7 @@ namespace Hastane_Randevu_Sistemi
             this.buttondoktorpaneli.TabIndex = 15;
             this.buttondoktorpaneli.Text = "Doktor Paneli";
             this.buttondoktorpaneli.UseVisualStyleBackColor = true;
+            this.buttondoktorpaneli.Click += new System.EventHandler(this.buttondoktorpaneli_Click);
             // 
             // FormSekreterDetay
             // 
@@ -430,7 +423,6 @@ namespace Hastane_Randevu_Sistemi
         private System.Windows.Forms.Button buttonduyuruolustur;
         private System.Windows.Forms.RichTextBox richduyuru;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button buttonrandevuguncelle;
         private System.Windows.Forms.Button buttonrandevukaydet;
         private System.Windows.Forms.CheckBox checkBoxdurum;
         private System.Windows.Forms.MaskedTextBox maskedtc;

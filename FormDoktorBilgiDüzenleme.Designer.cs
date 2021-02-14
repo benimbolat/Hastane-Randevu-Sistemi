@@ -56,6 +56,7 @@ namespace Hastane_Randevu_Sistemi
             this.butondoktorbilgiguncelle.Text = "Yeni Bilgileri Kaydet";
             this.butondoktorbilgiguncelle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.butondoktorbilgiguncelle.UseVisualStyleBackColor = false;
+            this.butondoktorbilgiguncelle.Click += new System.EventHandler(this.butondoktorbilgiguncelle_Click);
             // 
             // textdoktorsoyad
             // 
@@ -173,6 +174,7 @@ namespace Hastane_Randevu_Sistemi
             this.MinimizeBox = false;
             this.Name = "FormDoktorBilgiDüzenleme";
             this.Text = "Doktor Bilgi Düzenleme Paneli";
+            this.Load += new System.EventHandler(this.FormDoktorBilgiDüzenleme_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

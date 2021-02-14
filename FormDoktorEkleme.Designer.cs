@@ -132,12 +132,14 @@ namespace Hastane_Randevu_Sistemi
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(173, 6);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(341, 182);
+            this.dataGridView1.Size = new System.Drawing.Size(572, 182);
             this.dataGridView1.TabIndex = 10;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // buttondoktorekle
             // 
@@ -147,6 +149,7 @@ namespace Hastane_Randevu_Sistemi
             this.buttondoktorekle.TabIndex = 11;
             this.buttondoktorekle.Text = "Ekle";
             this.buttondoktorekle.UseVisualStyleBackColor = true;
+            this.buttondoktorekle.Click += new System.EventHandler(this.buttondoktorekle_Click);
             // 
             // buttondoktorsil
             // 
@@ -166,6 +169,7 @@ namespace Hastane_Randevu_Sistemi
             this.buttondoktorguncelle.TabIndex = 13;
             this.buttondoktorguncelle.Text = "Güncelle";
             this.buttondoktorguncelle.UseVisualStyleBackColor = true;
+            this.buttondoktorguncelle.Click += new System.EventHandler(this.buttondoktorguncelle_Click);
             // 
             // FormDoktorEkleme
             // 
@@ -173,7 +177,7 @@ namespace Hastane_Randevu_Sistemi
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(519, 198);
+            this.ClientSize = new System.Drawing.Size(747, 198);
             this.Controls.Add(this.buttondoktorguncelle);
             this.Controls.Add(this.buttondoktorsil);
             this.Controls.Add(this.buttondoktorekle);
@@ -193,6 +197,7 @@ namespace Hastane_Randevu_Sistemi
             this.MinimizeBox = false;
             this.Name = "FormDoktorEkleme";
             this.Text = "Doktor Düzenleme Paneli";
+            this.Load += new System.EventHandler(this.FormDoktorEkleme_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

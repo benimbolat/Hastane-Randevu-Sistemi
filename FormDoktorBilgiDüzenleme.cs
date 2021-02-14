@@ -16,5 +16,15 @@ namespace Hastane_Randevu_Sistemi
         {
             InitializeComponent();
         }
+
+        private void butondoktorbilgiguncelle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormDoktorBilgiDüzenleme_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

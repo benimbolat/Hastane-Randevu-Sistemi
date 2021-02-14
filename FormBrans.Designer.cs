@@ -49,6 +49,7 @@ namespace Hastane_Randevu_Sistemi
             this.buttonbransguncelle.TabIndex = 27;
             this.buttonbransguncelle.Text = "Güncelle";
             this.buttonbransguncelle.UseVisualStyleBackColor = true;
+            this.buttonbransguncelle.Click += new System.EventHandler(this.buttonbransguncelle_Click);
             // 
             // buttonbranssil
             // 
@@ -58,6 +59,7 @@ namespace Hastane_Randevu_Sistemi
             this.buttonbranssil.TabIndex = 26;
             this.buttonbranssil.Text = "Sil";
             this.buttonbranssil.UseVisualStyleBackColor = true;
+            this.buttonbranssil.Click += new System.EventHandler(this.buttonbranssil_Click);
             // 
             // buttonbransekle
             // 
@@ -67,6 +69,7 @@ namespace Hastane_Randevu_Sistemi
             this.buttonbransekle.TabIndex = 25;
             this.buttonbransekle.Text = "Ekle";
             this.buttonbransekle.UseVisualStyleBackColor = true;
+            this.buttonbransekle.Click += new System.EventHandler(this.buttonbransekle_Click);
             // 
             // dataGridView1
             // 
@@ -76,6 +79,7 @@ namespace Hastane_Randevu_Sistemi
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(341, 150);
             this.dataGridView1.TabIndex = 24;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // textbransad
             // 
@@ -115,7 +119,7 @@ namespace Hastane_Randevu_Sistemi
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(520, 165);
+            this.ClientSize = new System.Drawing.Size(520, 169);
             this.Controls.Add(this.buttonbransguncelle);
             this.Controls.Add(this.buttonbranssil);
             this.Controls.Add(this.buttonbransekle);
@@ -129,6 +133,7 @@ namespace Hastane_Randevu_Sistemi
             this.MinimizeBox = false;
             this.Name = "FormBrans";
             this.Text = "Branş Düzenleme";
+            this.Load += new System.EventHandler(this.FormBrans_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

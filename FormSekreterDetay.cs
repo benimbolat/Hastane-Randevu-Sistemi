@@ -24,6 +24,7 @@ namespace Hastane_Randevu_Sistemi
         private void FormSekreterDetay_Load(object sender, EventArgs e)
         {
             lblsekretertc.Text = tcnumarasekreter;
+
             //AD Soyad ekleme
 
             SqlCommand komut = new SqlCommand("Select sekreteradsoyad From Table_Sekreterler where sekretertc=@p1",bgl.baglanti());
@@ -76,6 +77,7 @@ namespace Hastane_Randevu_Sistemi
         private void comboBoxbrans_SelectedIndexChanged(object sender, EventArgs e)
         {
             //combobox'a doktor çekme
+            comboBoxdoktor.Items.Clear();
             SqlCommand komutkaydet = new SqlCommand("select doktorad,doktorsoyad From Table_Doktorlar where doktorbrans=@sart1", bgl.baglanti());
             komutkaydet.Parameters.AddWithValue("@sart1", comboBoxbrans.Text);
             SqlDataReader dr = komutkaydet.ExecuteReader();
@@ -84,6 +86,38 @@ namespace Hastane_Randevu_Sistemi
                 comboBoxdoktor.Items.Add(dr[0] + " " +dr[1] );
             }
             bgl.baglanti().Close();
+        }
+
+        private void buttonduyuruolustur_Click(object sender, EventArgs e)
+        {
+            SqlCommand duyurukaydet = new SqlCommand("insert into Table_Duyurular (duyuru) values (@duyuru)", bgl.baglanti());
+            duyurukaydet.Parameters.AddWithValue("@duyuru", richduyuru.Text);
+            duyurukaydet.ExecuteNonQuery();
+            bgl.baglanti().Close();
+            MessageBox.Show("Duyuru kaydedildi.", "Başarılı");
+
+        }
+
+        private void buttondoktorpaneli_Click(object sender, EventArgs e)
+        {
+            FormDoktorEkleme fr = new FormDoktorEkleme();
+            fr.Show();
+        }
+
+        private void buttonbranspaneli_Click(object sender, EventArgs e)
+        {
+            FormBrans fr = new FormBrans();
+            fr.Show();
+        }
+
+        private void buttonrandevulistesi_Click(object sender, EventArgs e)
+        {
+            FormRandevuListesi fr = new FormRandevuListesi();
+            fr.Show();
+        }
+
+        private void buttonrandevuguncelle_Click(object sender, EventArgs e)
+        {
         }
     }
 }
