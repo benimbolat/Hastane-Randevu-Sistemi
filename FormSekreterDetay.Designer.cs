@@ -190,6 +190,7 @@ namespace Hastane_Randevu_Sistemi
             this.buttonrandevukaydet.TabIndex = 14;
             this.buttonrandevukaydet.Text = "Kaydet";
             this.buttonrandevukaydet.UseVisualStyleBackColor = true;
+            this.buttonrandevukaydet.Click += new System.EventHandler(this.buttonrandevukaydet_Click);
             // 
             // checkBoxdurum
             // 
@@ -225,6 +226,7 @@ namespace Hastane_Randevu_Sistemi
             this.comboBoxbrans.Name = "comboBoxbrans";
             this.comboBoxbrans.Size = new System.Drawing.Size(100, 21);
             this.comboBoxbrans.TabIndex = 10;
+            this.comboBoxbrans.SelectedIndexChanged += new System.EventHandler(this.comboBoxbrans_SelectedIndexChanged);
             // 
             // maskedTextBoxsaat
             // 
@@ -317,6 +319,7 @@ namespace Hastane_Randevu_Sistemi
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 16);
@@ -336,6 +339,7 @@ namespace Hastane_Randevu_Sistemi
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(3, 16);
@@ -363,7 +367,6 @@ namespace Hastane_Randevu_Sistemi
             this.buttonrandevulistesi.TabIndex = 17;
             this.buttonrandevulistesi.Text = "Randevu Listesi";
             this.buttonrandevulistesi.UseVisualStyleBackColor = true;
-            this.buttonrandevulistesi.Click += new System.EventHandler(this.button5_Click);
             // 
             // buttonbranspaneli
             // 
@@ -401,6 +404,7 @@ namespace Hastane_Randevu_Sistemi
             this.MinimizeBox = false;
             this.Name = "FormSekreterDetay";
             this.Text = "Sekreter Detay Paneli";
+            this.Load += new System.EventHandler(this.FormSekreterDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

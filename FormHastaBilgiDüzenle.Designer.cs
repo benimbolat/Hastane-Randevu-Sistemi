@@ -54,10 +54,11 @@ namespace Hastane_Randevu_Sistemi
             this.butonhastabilgiguncelle.Location = new System.Drawing.Point(35, 190);
             this.butonhastabilgiguncelle.Name = "butonhastabilgiguncelle";
             this.butonhastabilgiguncelle.Size = new System.Drawing.Size(228, 23);
-            this.butonhastabilgiguncelle.TabIndex = 33;
+            this.butonhastabilgiguncelle.TabIndex = 7;
             this.butonhastabilgiguncelle.Text = "Yeni Bilgileri Kaydet";
             this.butonhastabilgiguncelle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.butonhastabilgiguncelle.UseVisualStyleBackColor = false;
+            this.butonhastabilgiguncelle.Click += new System.EventHandler(this.butonhastabilgiguncelle_Click);
             // 
             // comboBoxcinsiyet
             // 
@@ -68,7 +69,7 @@ namespace Hastane_Randevu_Sistemi
             this.comboBoxcinsiyet.Location = new System.Drawing.Point(117, 163);
             this.comboBoxcinsiyet.Name = "comboBoxcinsiyet";
             this.comboBoxcinsiyet.Size = new System.Drawing.Size(146, 21);
-            this.comboBoxcinsiyet.TabIndex = 32;
+            this.comboBoxcinsiyet.TabIndex = 6;
             // 
             // label7
             // 
@@ -85,7 +86,7 @@ namespace Hastane_Randevu_Sistemi
             this.msktelefon.Mask = "(999) 000-0000";
             this.msktelefon.Name = "msktelefon";
             this.msktelefon.Size = new System.Drawing.Size(146, 20);
-            this.msktelefon.TabIndex = 30;
+            this.msktelefon.TabIndex = 4;
             // 
             // label6
             // 
@@ -101,7 +102,7 @@ namespace Hastane_Randevu_Sistemi
             this.texthastasoyad.Location = new System.Drawing.Point(117, 56);
             this.texthastasoyad.Name = "texthastasoyad";
             this.texthastasoyad.Size = new System.Drawing.Size(146, 20);
-            this.texthastasoyad.TabIndex = 28;
+            this.texthastasoyad.TabIndex = 2;
             // 
             // label5
             // 
@@ -117,7 +118,7 @@ namespace Hastane_Randevu_Sistemi
             this.texthastaad.Location = new System.Drawing.Point(117, 30);
             this.texthastaad.Name = "texthastaad";
             this.texthastaad.Size = new System.Drawing.Size(146, 20);
-            this.texthastaad.TabIndex = 26;
+            this.texthastaad.TabIndex = 1;
             // 
             // label4
             // 
@@ -134,7 +135,7 @@ namespace Hastane_Randevu_Sistemi
             this.msktchasta.Mask = "00000000000";
             this.msktchasta.Name = "msktchasta";
             this.msktchasta.Size = new System.Drawing.Size(146, 20);
-            this.msktchasta.TabIndex = 24;
+            this.msktchasta.TabIndex = 3;
             this.msktchasta.ValidatingType = typeof(int);
             // 
             // hastasifre
@@ -142,7 +143,7 @@ namespace Hastane_Randevu_Sistemi
             this.hastasifre.Location = new System.Drawing.Point(117, 134);
             this.hastasifre.Name = "hastasifre";
             this.hastasifre.Size = new System.Drawing.Size(146, 20);
-            this.hastasifre.TabIndex = 23;
+            this.hastasifre.TabIndex = 5;
             // 
             // label3
             // 
@@ -174,6 +175,7 @@ namespace Hastane_Randevu_Sistemi
             // 
             // FormHastaBilgiDüzenle
             // 
+            this.AcceptButton = this.butonhastabilgiguncelle;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -199,6 +201,7 @@ namespace Hastane_Randevu_Sistemi
             this.MinimizeBox = false;
             this.Name = "FormHastaBilgiDüzenle";
             this.Text = "Hasta Bilgi Düzenleme";
+            this.Load += new System.EventHandler(this.FormHastaBilgiDüzenle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

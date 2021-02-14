@@ -61,6 +61,7 @@ namespace Hastane_Randevu_Sistemi
             this.linkuyeolsekreter.TabIndex = 18;
             this.linkuyeolsekreter.TabStop = true;
             this.linkuyeolsekreter.Text = "buraya";
+//            this.linkuyeolsekreter.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkuyeolsekreter_LinkClicked);
             // 
             // label4
             // 
@@ -79,6 +80,7 @@ namespace Hastane_Randevu_Sistemi
             this.butongirissekreter.TabIndex = 16;
             this.butongirissekreter.Text = "Giriş yap";
             this.butongirissekreter.UseVisualStyleBackColor = true;
+            this.butongirissekreter.Click += new System.EventHandler(this.butongirissekreter_Click);
             // 
             // sekretertcid
             // 

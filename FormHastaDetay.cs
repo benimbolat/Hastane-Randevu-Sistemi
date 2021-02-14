@@ -72,7 +72,7 @@ namespace Hastane_Randevu_Sistemi
                 comboBoxdoktor.Items.Add(dr3[0] + " " + dr3[1]);
 
             }
-            bgl.baglanti().Close();                                     //Genel Bağlantı Kapaması (yukarıda veya aşşağıda olması önemsiz. Parantez içinde olması yeterli.)
+            bgl.baglanti().Close();        //Genel Bağlantı Kapaması (yukarıda veya aşşağıda olması önemsiz. Parantez içinde olması yeterli.)
 
         }
 
@@ -89,6 +89,7 @@ namespace Hastane_Randevu_Sistemi
         private void linkLabelbilgiduzenle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FormHastaBilgiDüzenle fr = new FormHastaBilgiDüzenle();
+            fr.tcno = lbltc.Text;
             fr.Show();
         }
     }
